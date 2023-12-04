@@ -1,13 +1,12 @@
 /*
- * https://www.acmicpc.net/problem/10810
+ * https://www.acmicpc.net/problem/10813
  *
- * 
- * System.out, System.in 대신 io Stream중 문자열을 다루는 InputStreamReader
- * OutputStreamWriter를 사용하여 Stream을 다루고
- * BufferedReader와 BufferedWriter를 사용해서 버퍼를 통해 문자열을 입출력했다.
- * => 빠른 입출력 속도를 위해서  
- * 
+ *
+ * System.out, System.in 대신 io Stream중 문자열을 다루는 InputStreamReader OutputStreamWriter를 사용하여 Stream을
+ * 다루고 BufferedReader와 BufferedWriter를 사용해서 버퍼를 통해 문자열을 입출력했다. => 빠른 입출력 속도를 위해서
+ *
  */
+package array;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -19,7 +18,6 @@ import java.util.StringTokenizer;
 public class Baekjoon10810 {
 
   public static void main(String[] args) throws IOException {
-
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
