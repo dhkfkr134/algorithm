@@ -20,6 +20,7 @@ public class Ex05 {
          arr[string.charAt(i)-65] += 1;
        }
      }
+     
      int max = 0;
      int value = 0;
      boolean isSame = false;
