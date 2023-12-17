@@ -14,10 +14,9 @@ public class Ex03 {
     for (int i = 0; i < 5; i++) {
       arr[i] = scanner.nextLine();
       }
-    for (int j = 0; j < 5; j++) {
-      for (int k = 0; k < arr[j].length(); k++) {
-        System.out.printf("%d, %d, %d\n",j,k,arr[j].length());
-        trr[k][j] = arr[j].charAt(k);
+    for (int j = 0; j < arr[0].lenght(); j++) {
+      for (int k = 0; k < 5; k++) {
+        System.out.print(arr[k][j]);
       }
     }
     for(int i = 0; i < 5 ; i++) {
