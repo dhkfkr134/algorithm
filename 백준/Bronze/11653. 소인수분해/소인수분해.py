@@ -4,13 +4,7 @@
 # 4. 소수일경우를 대비해서 cnt로 소수를 판별하고 N값그대로 출력
 import sys, math
 N = int(sys.stdin.readline())
-cnt = 0
-result = N
-for i in range(2, math.ceil(N/2)+1):
+for i in range(2, N+1):
     while N % i == 0:
         print(i)
         N = N // i
-        cnt += 1
-if cnt == 0:
-    if result != 1:
-        print(result)
