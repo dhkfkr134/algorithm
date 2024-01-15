@@ -8,7 +8,6 @@ import sys, math
 def isPrime(num):
     if num == 2:
         return True
-    
     if num % 2 == 0:
         return False
     if num < 2:
@@ -19,14 +18,12 @@ def isPrime(num):
         i += 1
     return True
 
-def solve():
-    N = int(sys.stdin.readline())
-    for _ in range(N):
-        n = int(sys.stdin.readline())
-        while True:
-            if isPrime(n):
-                print(n)
-                break
-            else:
-                n += 1
-solve()
+N = int(sys.stdin.readline())
+for _ in range(N):
+    n = int(sys.stdin.readline())
+    while True:
+        if isPrime(n):
+            print(n)
+            break
+        else:
+            n += 1
