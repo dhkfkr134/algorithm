@@ -10,10 +10,9 @@ def isPrime(num):
         i += 1
     return True
 
-input = sys.stdin.readline
-N = int(input())
+N = int(sys.stdin.readline())
 for _ in range(N):
-    n = int(input())
+    n = int(sys.stdin.readline())
     while True:
         if isPrime(n):
             print(n)
