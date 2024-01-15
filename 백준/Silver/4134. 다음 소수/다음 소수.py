@@ -10,12 +10,14 @@ def isPrime(num):
         i += 1
     return True
 
-N = int(sys.stdin.readline())
-for _ in range(N):
-    n = int(sys.stdin.readline())
-    while True:
-        if isPrime(n):
-            print(n)
-            break
-        else:
-            n += 1
+def solve():
+    N = int(sys.stdin.readline())
+    for _ in range(N):
+        n = int(sys.stdin.readline())
+        while True:
+            if isPrime(n):
+                print(n)
+                break
+            else:
+                n += 1
+solve()
