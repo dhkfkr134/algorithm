@@ -3,22 +3,22 @@
 # 2. 1-N의 범위에서 a,b 둘중하나가 루트N 보다 크다면 나머지는 루트N 보다 작아야한다.(N = a*b이기 때문에)
 # 3. 2~루트N 까지의 수 중에서 N을 나누어 떨어뜨리는 값이 없다면 소수라고 확정할 수 있다.
 # ! 소수구할 때 짝수일때까지 한번에 정리하면 시간복잡도를 또 반으로 줄일 수 있다.
-import sys, math
 
-def isPrime(num):
-    if num == 2:
-        return True
-    if num % 2 == 0:
-        return False
-    if num < 2:
-        return False
-    for i in range(3, int(math.sqrt(num)+1), 2):
-        if num % i == 0:
-            return False
-        i += 1
-    return True
+# 넓은범위내에서 소수 찾아내는 방법은 "에라토스테네스의 체"의 방법이 가장 빠르다.
+# 1. 2의 배수는 다 제거
+# 2. 3의 배수는 다 제거
+# 3. 다음 수부터는 제거되지 않은 수라면 그 수를 제외 하고 배수 다 제거하기
+# 4. M^(1/2)까지만 반복하면 소수 다 지워짐
 
-N,M = map(int,sys.stdin.readline().split())
-for n in range(N, M+1):
-        if isPrime(n):
-            print(n)
+n, m = map(int, input().split())
+nums = [0] * (m+1)
+prime = []
+for i in range(2, m+1):
+    if nums[i] == 0:
+        prime.append(i)
+        if i >= n:
+            print(i)
+    else:
+        continue
+    for j in range(i ** 2, m + 1, i):
+        nums[j] = 1
