@@ -12,7 +12,6 @@ public class Card2 {
       q.add(i);
     }
     while (q.size() > 1) {
-    System.out.println(q.toString());
     q.pollFirst();
     q.addLast(q.pollFirst());
     }
