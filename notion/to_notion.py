@@ -146,6 +146,7 @@ def create_pages():
                 url = "https://api.notion.com/v1/database"
                 response = requests.post(url=url,headers=headers,data=json_data)
                 print(response.status_code)
+                print(json_data)
                 
                 # update problems file
                 solved.append(d_path)
